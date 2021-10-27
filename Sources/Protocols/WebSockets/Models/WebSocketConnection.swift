@@ -102,7 +102,7 @@ open class WebSocketConnection: TCPConnection, WebSocket {
   private func received(data: Data) {
     do {
       try parser.parse(data: data)
-      socket.read(timeout: config.readTimeout)
+        socket.read()
     } catch {
       config.errorHandler.incoming(error: error, webSocket: self, message: nil)
     }
