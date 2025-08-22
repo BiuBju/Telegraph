@@ -9,7 +9,7 @@
 import Foundation
 
 public class WebSocketMessageDefaultHandler: WebSocketMessageHandler {
-  public func incoming(message: WebSocketMessage, from webSocket: WebSocket) throws {
+  public func incoming(message: WebSocketMessage, from webSocket: TGWebSocket) throws {
     switch message.opcode {
 
     case .connectionClose:
@@ -26,5 +26,5 @@ public class WebSocketMessageDefaultHandler: WebSocketMessageHandler {
     }
   }
 
-  public func outgoing(message: WebSocketMessage, to webSocket: WebSocket) throws {}
+  public func outgoing(message: WebSocketMessage, to webSocket: TGWebSocket) throws {}
 }

@@ -7,6 +7,6 @@
 //
 
 public protocol WebSocketMessageHandler {
-  func incoming(message: WebSocketMessage, from webSocket: WebSocket) throws
-  func outgoing(message: WebSocketMessage, to webSocket: WebSocket) throws
+  func incoming(message: WebSocketMessage, from webSocket: TGWebSocket) throws
+  func outgoing(message: WebSocketMessage, to webSocket: TGWebSocket) throws
 }

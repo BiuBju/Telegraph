@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: WebSocketConnectionDelegate
 
-public protocol WebSocketConnectionDelegate: class {
+public protocol WebSocketConnectionDelegate: AnyObject {
   func connection(_ webSocketConnection: WebSocketConnection, didReceiveMessage message: WebSocketMessage)
   func connection(_ webSocketConnection: WebSocketConnection, didSendMessage message: WebSocketMessage)
   func connection(_ webSocketConnection: WebSocketConnection, didCloseWithError error: Error?)
@@ -18,7 +18,7 @@ public protocol WebSocketConnectionDelegate: class {
 
 // MARK: WebSocketConnection
 
-open class WebSocketConnection: TCPConnection, WebSocket {
+open class WebSocketConnection: TCPConnection, TGWebSocket {
   public weak var delegate: WebSocketConnectionDelegate?
 
   private let socket: TCPSocket

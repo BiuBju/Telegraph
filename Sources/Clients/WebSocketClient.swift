@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol WebSocketClientDelegate: class {
+public protocol WebSocketClientDelegate: AnyObject {
   func webSocketClient(_ client: WebSocketClient, didConnectToHost host: String)
   func webSocketClient(_ client: WebSocketClient, didDisconnectWithError error: Error?)
 
@@ -16,7 +16,7 @@ public protocol WebSocketClientDelegate: class {
   func webSocketClient(_ client: WebSocketClient, didReceiveText text: String)
 }
 
-open class WebSocketClient: WebSocket {
+open class WebSocketClient: TGWebSocket {
   public let url: URL
   public var headers: HTTPHeaders
 

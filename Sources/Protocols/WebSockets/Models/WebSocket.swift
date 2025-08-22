@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol WebSocket: class {
+public protocol TGWebSocket: AnyObject {
   var localEndpoint: Endpoint? { get }
   var remoteEndpoint: Endpoint? { get }
 
@@ -20,7 +20,7 @@ public protocol WebSocket: class {
 
 // MARK: Default implementation
 
-public extension WebSocket {
+public extension TGWebSocket {
   func send(data: Data) {
     send(message: WebSocketMessage(data: data))
   }

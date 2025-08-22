@@ -9,6 +9,6 @@
 import Foundation
 
 public protocol WebSocketErrorHandler {
-  func incoming(error: Error, webSocket: WebSocket, message: WebSocketMessage?)
-  func outgoing(error: Error, webSocket: WebSocket, message: WebSocketMessage?)
+  func incoming(error: Error, webSocket: TGWebSocket, message: WebSocketMessage?)
+  func outgoing(error: Error, webSocket: TGWebSocket, message: WebSocketMessage?)
 }

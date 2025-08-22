@@ -11,9 +11,9 @@ import Foundation
 public class WebSocketErrorDefaultHandler: WebSocketErrorHandler {
   // See https://tools.ietf.org/html/rfc6455#page-64
 
-  public func incoming(error: Error, webSocket: WebSocket, message: WebSocketMessage?) {
+  public func incoming(error: Error, webSocket: TGWebSocket, message: WebSocketMessage?) {
     webSocket.close(immediately: false)
   }
 
-  public func outgoing(error: Error, webSocket: WebSocket, message: WebSocketMessage?) {}
+  public func outgoing(error: Error, webSocket: TGWebSocket, message: WebSocketMessage?) {}
 }

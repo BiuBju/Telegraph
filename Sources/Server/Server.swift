@@ -176,7 +176,7 @@ public extension Server {
   }
 
   /// The WebSockets currently connected to this server.
-  var webSockets: [WebSocket] {
+  var webSockets: [TGWebSocket] {
     return webSocketConnections.toArray()
   }
 }
